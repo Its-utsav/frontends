@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev:coffee": "npx @tailwindcss/cli -i ./coffee/src/input.css -o ./coffee/src/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.6",
+    "tailwindcss": "^4.1.6"
+  }
+}

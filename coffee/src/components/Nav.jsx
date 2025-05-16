@@ -3,31 +3,32 @@ const Nav = () => {
   const links = [
     {
       link: "Home",
-      des: "/",
+      des: "#",
     },
     {
       link: "Menu",
-      des: "/menu",
+      des: "#",
     },
     {
       link: "Rewards",
-      des: "/rewards",
+      des: "#",
     },
     {
       link: "Gift Cards",
-      des: "/gift-cards",
+      des: "#",
     },
     {
       link: "Stores",
-      des: "/stores",
+      des: "#",
     },
   ];
 
   return (
     <nav className="h-1/6 flex w-full items-center justify-center">
-      <header className="flex items-center justify-evenly w-full">
+      <header className="md:flex md:w-full md:items-center md:justify-evenly">
         <img src="logo.png" alt="" className="h-20" />
-        <ul className="flex gap-6 text-lg">
+
+        <ul className="flex items-center justify-center gap-6 text-lg text-white">
           {links.map((link, index) => (
             <li key={index}>
               <a href={link.des}>{link.link}</a>
@@ -36,6 +37,11 @@ const Nav = () => {
         </ul>
         <Button text={"sign in"} />
       </header>
+      <div className="flex flex-col gap-0.5 md:hidden">
+        <div className="h-2 w-4 bg-black block"></div>
+        <div className="h-2 w-4 bg-black block"></div>
+        <div className="h-2 w-4 bg-black block"></div>
+      </div>
     </nav>
   );
 };
